@@ -1,9 +1,13 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import {useState} from 'react';
 
-function App() {
-  const [count, setCount] = useState(0)
+import logo from './logo.svg';
+
+import './App.css';
+
+export function App() {
+  const [count, setCount] = useState(0);
+
+  console.log('logo', logo);
 
   return (
     <div className="App">
@@ -39,7 +43,5 @@ function App() {
         </p>
       </header>
     </div>
-  )
+  );
 }
-
-export default App

@@ -17,18 +17,6 @@
     "type": "git",
     "url": "git+https://github.com/beefchimi/vite-css-modules.git"
   },
-  "files": [
-    "dist"
-  ],
-  "types": "./dist/index.d.ts",
-  "main": "./dist/vite-css-modules.umd.js",
-  "module": "./dist/vite-css-modules.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/vite-css-modules.es.js",
-      "require": "./dist/vite-css-modules.umd.js"
-    }
-  },
   "engines": {
     "node": ">=16.0.0"
   },
