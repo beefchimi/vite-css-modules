@@ -1,0 +1,36 @@
+.Main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--color-text-font-size);
+  color: var(--color-text-surface);
+
+  h1 {
+  }
+
+  p {
+  }
+}
+
+.Action {
+  font-size: var(--action-font-size);
+}
+
+.Hyperlink {
+  color: var(--hyperlink-color);
+}
+
+.Hyperlink:hover {
+  --hyperlink-color: var(--color-interactive-text-hover);
+}
+
+.Hyperlink:active {
+  --hyperlink-color: var(--color-interactive-text-active);
+}
+
+.Hyperlink:focus {
+  --hyperlink-color: var(--color-interactive-text-focus);
+}

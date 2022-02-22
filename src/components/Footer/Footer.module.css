@@ -1,0 +1,4 @@
+.Footer {
+  grid-area: footer;
+  height: var(--footer-height);
+}

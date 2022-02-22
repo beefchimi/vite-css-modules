@@ -1,0 +1,34 @@
+:root {
+  /* Colors */
+  --color-primary: purple;
+  --color-secondary: salmon;
+  --color-interactive-text: #61dafb;
+  --color-interactive-text-hover: #2da6c7;
+  --color-interactive-text-active: #44bcdd;
+  --color-interactive-text-focus: indigo;
+
+  /* Typography */
+  --font-family-common: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  --font-family-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+
+  --text-font-size: calc(10px + 2vmin);
+  --action-font-size: calc(10px + 2vmin);
+
+  --text-surface-color: white;
+
+  /* Frame */
+  --frame-bg-color: #282c34;
+
+  /* Header */
+  --header-height: 64px;
+  --header-bg-color: black;
+
+  /* Footer */
+  --footer-height: 64px;
+
+  /* Actions */
+  --hyperlink-color: var(--color-interactive-text);
+}

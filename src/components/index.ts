@@ -1,1 +1,4 @@
-export const HelloWorld = 'Hello World';
+export * from './Footer';
+export * from './Frame';
+export * from './Header';
+export * from './Main';

@@ -1,0 +1,11 @@
+.Frame {
+  grid-template-areas: 'header' 'main' 'footer';
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--font-family-common);
+  background-color: var(--frame-bg-color);
+
+  code {
+    font-family: var(--font-family-code);
+  }
+}
