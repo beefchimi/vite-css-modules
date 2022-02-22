@@ -1,0 +1,8 @@
+{
+  "extends": [
+    "plugin:@beefchimi/esnext",
+    "plugin:@beefchimi/react",
+    "plugin:@beefchimi/typescript",
+    "plugin:@beefchimi/prettier"
+  ]
+}
