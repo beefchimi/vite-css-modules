@@ -4,8 +4,8 @@
   height: 100vh;
   font-family: var(--font-family-common);
   background-color: var(--frame-bg-color);
+}
 
-  code {
-    font-family: var(--font-family-code);
-  }
+.Frame code {
+  font-family: var(--font-family-code);
 }

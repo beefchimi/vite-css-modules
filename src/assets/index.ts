@@ -1,1 +1,1 @@
-export const Icon = 'Icon';
+export {ReactComponent as SvgLogo} from './logo.svg';

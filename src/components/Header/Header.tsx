@@ -1,5 +1,4 @@
-import logo from '../../logo.svg?raw';
-
+import {SvgLogo} from '../../assets';
 import styles from './Header.module.css';
 
 export interface HeaderProps {
@@ -8,15 +7,13 @@ export interface HeaderProps {
 }
 
 export function Header({navItems = [], animateLogo = false}: HeaderProps) {
-  console.log('logo', logo);
-
   console.log('navItems', navItems);
   console.log('animateLogo', animateLogo);
 
   return (
     <header className={styles.Header}>
       <div className={styles.LogoWrapper}>
-        <img src={logo} className={styles.Logo} alt="logo" />
+        <SvgLogo />
       </div>
     </header>
   );

@@ -7,12 +7,12 @@
   text-align: center;
   font-size: var(--color-text-font-size);
   color: var(--color-text-surface);
+}
 
-  h1 {
-  }
+.Main h1 {
+}
 
-  p {
-  }
+.Main p {
 }
 
 .Action {
