@@ -1,0 +1,52 @@
+/*
+ * Pay special attention to the `:global()` function wrapper
+ * around the keyframe name.
+*/
+@keyframes :global(global-pulse-animation) {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes local-spin-animation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Logo {
+  flex: 0 0 auto;
+  width: 64px;
+  height: 64px;
+}
+
+.Logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /*
+   * Using `:global` in this way allows the classname `.Logo` to get transformed,
+   * while it's contents (mainly, the `animation-name`) remain untransformed.
+   * This should not be confused with `:global .Logo` or `:global(.Logo)`,
+   * which would signal for the classname `.Logo` to remain untransformed.
+  */
+  .Logo :global {
+    animation: global-pulse-animation 2s infinite ease-in-out alternate;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Logo svg {
+    animation: local-spin-animation 4s infinite linear;
+  }
+}

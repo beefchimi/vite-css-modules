@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {App} from './App';
-
+// NOTE: These imports are order dependent!
 import './styles/reset.css';
 import './styles/design-system.css';
 import './styles/animation.css';
+
+import {App} from './App';
 
 ReactDOM.render(
   <React.StrictMode>

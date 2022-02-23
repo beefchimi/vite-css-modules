@@ -1,27 +1,16 @@
-@keyframes local-animation {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 .Header {
   grid-area: header;
+  display: flex;
+  gap: 20px;
+  align-items: center;
   height: var(--header-height);
   background-color: var(--header-bg-color);
 }
 
-.LogoWrapper {
-}
-
-.Logo {
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .Logo {
-    animation: local-animation infinite 2s linear alternate;
-  }
+.Title :global {
+  flex: 1 1 auto;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  animation: global-wiggle-animation infinite 2s linear;
 }

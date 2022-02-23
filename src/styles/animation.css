@@ -1,9 +1,21 @@
-@keyframes global-animation {
-  from {
-    transform: rotate(0deg);
+/*
+ * Since this is a plain `*.css` file (and not a `*.module.css` file),
+ * the contents of this file are considered "global". I do not need
+ * to use the `:global` flag to signal for anything to remain untransformed.
+ * Infact, since this is not a CSS Module,
+ * `:global` in this context is technically undefined and invalid.
+*/
+@keyframes global-wiggle-animation {
+  0%,
+  100% {
+    transform: translateX(0);
   }
 
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: translateX(-10px);
+  }
+
+  75% {
+    transform: translateX(10px);
   }
 }

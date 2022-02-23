@@ -1,20 +1,19 @@
-import {SvgLogo} from '../../assets';
+import {Logo} from './components';
+import type {LogoProps} from './components';
 import styles from './Header.module.css';
 
 export interface HeaderProps {
   navItems?: string[];
-  animateLogo?: boolean;
+  animateLogo?: LogoProps['animate'];
 }
 
 export function Header({navItems = [], animateLogo = false}: HeaderProps) {
   console.log('navItems', navItems);
-  console.log('animateLogo', animateLogo);
 
   return (
     <header className={styles.Header}>
-      <div className={styles.LogoWrapper}>
-        <SvgLogo />
-      </div>
+      <Logo animate={animateLogo} />
+      <h1 className={styles.Title}>CSS Modules</h1>
     </header>
   );
 }
