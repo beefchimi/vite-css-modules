@@ -11,7 +11,7 @@
     "skipLibCheck": false,
     "useDefineForClassFields": true,
     "jsx": "react-jsx",
-    "types": ["vite/client"]
+    "types": ["vite/client", "vite-plugin-svgr/client"]
   },
   "include": ["src"],
   // Remove custom definitions from `typescript-configs`
