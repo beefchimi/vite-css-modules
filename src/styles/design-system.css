@@ -7,6 +7,8 @@
   --color-interactive-text-active: #44bcdd;
   --color-interactive-text-focus: indigo;
 
+  --color-brand-react: #61dafb;
+
   /* Typography */
   --font-family-common: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
