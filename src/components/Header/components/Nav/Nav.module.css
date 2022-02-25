@@ -1,0 +1,29 @@
+.Nav {
+  position: relative;
+}
+
+.Action {
+  cursor: pointer;
+}
+
+.Menu {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background: red;
+}
+
+.menuActive {
+  display: block;
+}
+
+.Item {
+}
+
+.Link {
+}
+
+.NavEmptyState {
+  cursor: no-drop;
+}

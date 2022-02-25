@@ -3,14 +3,26 @@
   display: flex;
   gap: 20px;
   align-items: center;
+  padding: 10px;
   height: var(--header-height);
   background-color: var(--header-bg-color);
 }
 
+/*
+ * By using `:global` AFTER `.Title`, we allow the classname
+ * to be transformed, but preserve the declaration contents.
+ * Technically, all we care about preserving is the `animation-name`,
+ * so that might be better separated to its own declaration.
+*/
 .Title :global {
   flex: 1 1 auto;
   font-size: 20px;
   font-weight: 700;
   color: white;
   animation: global-wiggle-animation infinite 2s linear;
+}
+
+.NavWrapper {
+  flex: 0 0 auto;
+  margin-left: auto;
 }

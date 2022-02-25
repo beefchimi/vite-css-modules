@@ -1,19 +1,26 @@
-import {Logo} from './components';
-import type {LogoProps} from './components';
+import {Logo, Nav} from './components';
+import type {LogoProps, NavProps} from './components';
+
 import styles from './Header.module.css';
 
 export interface HeaderProps {
-  navItems?: string[];
+  navItems?: NavProps['items'];
   animateLogo?: LogoProps['animate'];
 }
 
 export function Header({navItems = [], animateLogo = false}: HeaderProps) {
-  console.log('navItems', navItems);
+  const navMarkup = navItems.length ? (
+    <Nav items={navItems} />
+  ) : (
+    <Nav.EmptyState />
+  );
 
   return (
     <header className={styles.Header}>
       <Logo animate={animateLogo} />
       <h1 className={styles.Title}>CSS Modules</h1>
+
+      <div className={styles.NavWrapper}>{navMarkup}</div>
     </header>
   );
 }
