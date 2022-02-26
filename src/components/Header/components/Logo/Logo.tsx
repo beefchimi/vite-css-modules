@@ -1,4 +1,5 @@
 import {SvgLogo} from '../../../../assets';
+import {classNames} from '../../../../utilities';
 import styles from './Logo.module.css';
 
 export interface LogoProps {
@@ -6,10 +7,12 @@ export interface LogoProps {
 }
 
 export function Logo({animate = false}: LogoProps) {
-  console.log('animate', animate);
+  const logoClassNames = classNames(styles.Logo, {
+    [styles.animate]: animate,
+  });
 
   return (
-    <div className={styles.Logo}>
+    <div className={logoClassNames}>
       <SvgLogo />
     </div>
   );

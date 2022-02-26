@@ -33,13 +33,13 @@
    * This should not be confused with `:global .Logo` or `:global(.Logo)`,
    * which would signal for the classname `.Logo` to remain untransformed.
   */
-  .Logo :global {
+  .animate :global {
     animation: global-pulse-animation 2s infinite ease-in-out alternate;
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .Logo svg {
+  .animate svg {
     animation: local-spin-animation 4s infinite linear;
   }
 }

@@ -33,11 +33,11 @@
   background-color: var(--color-surface-bg-invert-down);
 }
 
-.Logo:hover,
-.Logo:hover svg {
-  animation-play-state: paused;
-}
-
 .Logo:active {
   background-color: transparent;
+}
+
+.animate:hover,
+.animate:hover svg {
+  animation-play-state: paused;
 }

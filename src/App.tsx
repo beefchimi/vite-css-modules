@@ -11,7 +11,7 @@ export function App() {
 
   return (
     <Frame>
-      <Header navItems={navigation} />
+      <Header navItems={navigation} animateLogo />
       <Main />
       <Footer>
         <p>&copy; Tari Labs&trade; &mdash; 2020&ndash;2022</p>
