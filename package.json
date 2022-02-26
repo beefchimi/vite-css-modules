@@ -26,6 +26,7 @@
   "prettier": "@beefchimi/prettier-config",
   "scripts": {
     "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "test": "echo 'There is no testing suite set up for this app.'",
     "build": "npm run clean && tsc && vite build",
     "clean": "rm -rf coverage && rm -rf dist",
     "start": "vite",
