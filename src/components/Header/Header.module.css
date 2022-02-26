@@ -1,11 +1,12 @@
 .Header {
+  position: relative;
   grid-area: header;
   display: flex;
   gap: 20px;
   align-items: center;
   padding: 10px;
   height: var(--header-height);
-  background-color: var(--header-bg-color);
+  background-color: var(--color-surface-bg-invert);
 }
 
 /*

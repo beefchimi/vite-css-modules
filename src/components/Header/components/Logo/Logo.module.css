@@ -1,32 +1,23 @@
 /*
- * Pay special attention to the `:global()` function wrapper
- * around the keyframe name.
+ * Even though this is just a `.css` file (instead of `*.module.css`),
+ * it is being imported and parsed within a `*.module.scss` file
+ * (and nowhere else). Therefore, the contents of `_animations.css`
+ * ultimately just get dumped into this file, and everything is parsed
+ * and transformed by CSS Modules as you would expect.
 */
-@keyframes :global(global-pulse-animation) {
-  from {
-    opacity: 0.4;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes local-spin-animation {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
+@import './_animations';
 
 .Logo {
+  cursor: pointer;
   flex: 0 0 auto;
   width: 32px;
   height: 32px;
   color: var(--color-brand-react);
+  background-color: transparent;
+  border-radius: 4px;
+  transition-property: color, background-color;
+  transition-duration: 100ms;
+  transition-timing-function: ease-in-out;
 }
 
 .Logo svg {

@@ -14,7 +14,7 @@ export function App() {
       <Header navItems={navigation} />
       <Main />
       <Footer>
-        <p>Copyright Some Person 1900-3000.</p>
+        <p>&copy; Tari Labs&trade; &mdash; 2020&ndash;2022</p>
       </Footer>
     </Frame>
   );

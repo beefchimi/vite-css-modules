@@ -1,4 +1,14 @@
 .Footer {
   grid-area: footer;
+  display: grid;
+  place-items: center;
   height: var(--footer-height);
+  text-align: center;
+  background-color: var(--color-brand);
+}
+
+.Footer p {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
 }

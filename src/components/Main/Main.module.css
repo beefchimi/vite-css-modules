@@ -5,8 +5,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: var(--color-text-font-size);
-  color: var(--color-text-surface);
+  font-size: var(--font-size-base);
+  color: var(--color-text-invert);
 }
 
 .Main h1 {
@@ -16,7 +16,6 @@
 }
 
 .Action {
-  font-size: var(--action-font-size);
 }
 
 .Hyperlink {
@@ -24,13 +23,13 @@
 }
 
 .Hyperlink:hover {
-  --hyperlink-color: var(--color-interactive-text-hover);
+  --hyperlink-color: var(--color-text-interactive-up);
 }
 
 .Hyperlink:active {
-  --hyperlink-color: var(--color-interactive-text-active);
+  --hyperlink-color: var(--color-text-interactive-down);
 }
 
 .Hyperlink:focus {
-  --hyperlink-color: var(--color-interactive-text-focus);
+  text-decoration: underline;
 }
