@@ -1,5 +1,7 @@
 import type {ReactNode} from 'react';
 
+import {beefchimiImgUrl} from '../../assets/media';
+
 import styles from './Main.module.css';
 
 export interface MainProps {
@@ -13,6 +15,14 @@ export function Main({children}: MainProps) {
 
   return (
     <main className={styles.Main}>
+      <div className={styles.Beefchimi}>
+        <img
+          src={beefchimiImgUrl}
+          className={styles.Thumbnail}
+          alt="Take my to your leader"
+        />
+      </div>
+
       <h1 className={styles.Title}>Vite / React / TypeScript / CSS Modules</h1>
 
       <p>

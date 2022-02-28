@@ -9,6 +9,12 @@
   color: var(--color-text-invert);
 }
 
+.Beefchimi {
+  width: 100px;
+  border-radius: var(--radius-loose);
+  overflow: hidden;
+}
+
 .Main h1 {
 }
 
