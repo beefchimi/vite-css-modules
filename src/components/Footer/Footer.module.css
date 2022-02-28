@@ -1,14 +1,67 @@
 .Footer {
   grid-area: footer;
   display: grid;
-  place-items: center;
-  height: var(--footer-height);
-  text-align: center;
+  align-content: center;
+  justify-items: center;
+  padding: 10px;
+  min-height: var(--footer-height);
   background-color: var(--color-brand);
 }
 
-.Footer p {
+@media screen and (min-width: 768px) {
+  /* TODO: We need to use a SCSS-like variable here */
+  .Footer {
+    grid-template-columns: auto auto;
+    justify-items: unset;
+    padding: 20px;
+  }
+}
+
+.socialLinks {
+  /*
+   * Even though this does not actually contain any styles,
+   * the variant className will still get added to the markup.
+   * If we care about this, we could write some build tooling to parse
+   * each declaration for contents and assign `undefined` if empty.
+   * Alternatively, there might be a PostCSS plugin for this.
+  */
+}
+
+.Children {
+}
+
+.Children p {
   font-size: 14px;
   font-weight: 700;
   color: var(--color-text);
+}
+
+.SocialList {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  /* TODO: We need to use a SCSS-like variable here */
+  .SocialList {
+    justify-content: end;
+    margin-top: 0;
+  }
+}
+
+.SocialItem {
+}
+
+.SocialIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-text);
+}
+
+/* TODO: Turn this into a `mixin` */
+.SocialIcon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
 }

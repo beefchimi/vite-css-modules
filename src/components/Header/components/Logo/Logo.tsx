@@ -1,4 +1,4 @@
-import {SvgLogo} from '../../../../assets';
+import {SvgReactLogo} from '../../../../assets/svg';
 import {classNames} from '../../../../utilities';
 import styles from './Logo.module.css';
 
@@ -13,7 +13,7 @@ export function Logo({animate = false}: LogoProps) {
 
   return (
     <div className={logoClassNames}>
-      <SvgLogo />
+      <SvgReactLogo />
     </div>
   );
 }
