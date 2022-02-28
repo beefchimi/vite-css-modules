@@ -29,6 +29,16 @@
   --breakpoint-phablet: 480px;
   --breakpoint-tablet: 768px;
 
+  /* Animation */
+  --motion-duration: 100ms;
+  --motion-duration-slow: 200ms;
+  --motion-easing: ease-in-out;
+
+  /* Borders */
+  --radius: 4px;
+  --radius-tight: 2px;
+  --radius-loose: 8px;
+
   /* Typography */
   --font-family-common: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

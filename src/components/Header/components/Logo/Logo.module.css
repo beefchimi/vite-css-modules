@@ -14,10 +14,10 @@
   height: 32px;
   color: var(--color-brand-react);
   background-color: transparent;
-  border-radius: 4px;
+  border-radius: var(--radius);
   transition-property: color, background-color;
-  transition-duration: 100ms;
-  transition-timing-function: ease-in-out;
+  transition-duration: var(--motion-duration);
+  transition-timing-function: var(--motion-easing);
 }
 
 /* TODO: Turn this into a `mixin` */

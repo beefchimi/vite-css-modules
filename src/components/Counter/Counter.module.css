@@ -1,0 +1,52 @@
+.Counter {
+  padding: 10px;
+  border: 1px solid var(--color-surface-bg-invert);
+  border-radius: var(--radius-loose);
+}
+
+.Counter code {
+  padding: 2px 4px;
+  color: var(--color-brand-down);
+  background-color: var(--color-surface-bg-down);
+  border-radius: var(--radius-tight);
+}
+
+.Title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.ActionWrapper {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* TODO: Make a button mixin */
+.Action {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-text);
+  background-color: var(--color-brand);
+  border-radius: var(--radius);
+  transition: background-color var(--motion-duration) var(--motion-easing);
+}
+
+.Action:focus,
+.Action:hover {
+  background-color: var(--color-brand-down);
+}
+
+.Action:active {
+  background-color: var(--color-brand);
+}
+
+.decrement {
+}
+
+.increment {
+}

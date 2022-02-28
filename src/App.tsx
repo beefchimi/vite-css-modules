@@ -1,4 +1,4 @@
-import {Frame, Header, Main, Footer} from './components';
+import {Counter, Frame, Header, Main, Footer} from './components';
 import type {HeaderProps} from './components';
 
 export function App() {
@@ -12,7 +12,11 @@ export function App() {
   return (
     <Frame>
       <Header navItems={navigation} animateLogo />
-      <Main />
+
+      <Main>
+        <Counter initialCount={1} />
+      </Main>
+
       <Footer socialLinks>
         <p>&copy; Tari Labs&trade; &mdash; 2020&ndash;2022</p>
       </Footer>

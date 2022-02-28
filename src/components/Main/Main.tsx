@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import type {ReactNode} from 'react';
 
 import styles from './Main.module.css';
@@ -8,23 +7,13 @@ export interface MainProps {
 }
 
 export function Main({children}: MainProps) {
-  const [count, setCount] = useState(0);
-
-  function handleIncrementCount() {
-    setCount((count) => count + 1);
-  }
+  const childrenMarkup = children ? (
+    <div className={styles.Children}>{children}</div>
+  ) : null;
 
   return (
     <main className={styles.Main}>
-      <h1>Vite / React / TypeScript / CSS Modules</h1>
-
-      <button
-        type="button"
-        className={styles.Action}
-        onClick={handleIncrementCount}
-      >
-        Current count: {count}
-      </button>
+      <h1 className={styles.Title}>Vite / React / TypeScript / CSS Modules</h1>
 
       <p>
         Edit any file in <code>/src</code>, save, and watch your changes update
@@ -51,7 +40,7 @@ export function Main({children}: MainProps) {
         </a>
       </p>
 
-      {children}
+      {childrenMarkup}
     </main>
   );
 }
