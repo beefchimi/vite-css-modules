@@ -1,5 +1,6 @@
 .Counter {
   padding: 10px;
+  text-align: center;
   border: 1px solid var(--color-surface-bg-invert);
   border-radius: var(--radius-loose);
 }
@@ -45,8 +46,25 @@
   background-color: var(--color-brand);
 }
 
-.decrement {
+.Action[disabled],
+.Action[disabled]:focus,
+.Action[disabled]:hover,
+.Action[disabled]:active {
+  pointer-events: none;
+  background-color: var(--color-surface-bg-neutral);
+  opacity: 0.8;
 }
 
-.increment {
+.ActionLabel {
+  display: block;
+}
+
+.decrement .ActionLabel::before {
+  content: '🔥';
+  margin-right: 8px;
+}
+
+.increment .ActionLabel::after {
+  content: '✨';
+  margin-left: 8px;
 }

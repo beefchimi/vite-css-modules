@@ -18,7 +18,7 @@ export function Header({navItems = [], animateLogo = false}: HeaderProps) {
   return (
     <header className={styles.Header}>
       <Logo animate={animateLogo} />
-      <h1 className={styles.Title}>CSS Modules</h1>
+      <span className={styles.Title}>CSS Modules</span>
 
       <div className={styles.NavWrapper}>{navMarkup}</div>
     </header>

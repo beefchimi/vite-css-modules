@@ -15,40 +15,44 @@ export function Main({children}: MainProps) {
 
   return (
     <main className={styles.Main}>
-      <div className={styles.Beefchimi}>
-        <img
-          src={beefchimiImgUrl}
-          className={styles.Thumbnail}
-          alt="Take my to your leader"
-        />
+      <div className={styles.Typography}>
+        <div className={styles.Beefchimi}>
+          <img
+            src={beefchimiImgUrl}
+            className={styles.Thumbnail}
+            alt="Take my to your leader"
+          />
+        </div>
+
+        <h1 className={styles.Title}>
+          Vite / React / TypeScript / CSS Modules
+        </h1>
+
+        <p>
+          Edit any file in <code>/src</code>, save, and watch your changes
+          update live in the browser.
+        </p>
+
+        <p>
+          <a
+            className={styles.Hyperlink}
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+          {' | '}
+          <a
+            className={styles.Hyperlink}
+            href="https://vitejs.dev/guide/features.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Vite Docs
+          </a>
+        </p>
       </div>
-
-      <h1 className={styles.Title}>Vite / React / TypeScript / CSS Modules</h1>
-
-      <p>
-        Edit any file in <code>/src</code>, save, and watch your changes update
-        live in the browser.
-      </p>
-
-      <p>
-        <a
-          className={styles.Hyperlink}
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {' | '}
-        <a
-          className={styles.Hyperlink}
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
 
       {childrenMarkup}
     </main>

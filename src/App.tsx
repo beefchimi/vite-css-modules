@@ -14,7 +14,7 @@ export function App() {
       <Header navItems={navigation} animateLogo />
 
       <Main>
-        <Counter initialCount={1} />
+        <Counter initialCount={1} min={-10} max={10} />
       </Main>
 
       <Footer socialLinks>

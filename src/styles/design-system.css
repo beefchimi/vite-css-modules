@@ -1,22 +1,26 @@
 :root {
   /* Colors */
-  --color-surface-bg: #efe9f4;
   --color-surface-bg-up: #ffffff;
+  --color-surface-bg: #efe9f4;
   --color-surface-bg-down: #d8d4db;
 
-  --color-surface-bg-invert: #171d1c;
   --color-surface-bg-invert-up: #2d3937;
+  --color-surface-bg-invert: #171d1c;
   --color-surface-bg-invert-down: #090b0b;
+
+  --color-surface-bg-neutral-up: #776f69;
+  --color-surface-bg-neutral: #615b56;
+  --color-surface-bg-neutral-down: #423e3b;
 
   --color-text: #ffffff;
   --color-text-invert: #000000;
 
-  --color-text-interactive: #16bac5;
-  --color-text-interactive-up: #23d9e7;
-  --color-text-interactive-down: #129ba5;
+  --color-text-interactive-up: #62a1e4;
+  --color-text-interactive: #3083dc;
+  --color-text-interactive-down: #2378d1;
 
-  --color-brand: #5863f8;
   --color-brand-up: #8991fa;
+  --color-brand: #5863f8;
   --color-brand-down: #3b48f7;
 
   --color-brand-react: #61dafb;

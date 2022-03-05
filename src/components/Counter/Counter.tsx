@@ -1,22 +1,28 @@
-import {useState} from 'react';
+import {useCallback, useState} from 'react';
 
 import {classNames} from '../../utilities';
 import styles from './Counter.module.css';
 
 export interface CounterProps {
   initialCount?: number;
+  min?: number;
+  max?: number;
 }
 
-export function Counter({initialCount = 0}: CounterProps) {
+export function Counter({initialCount = 0, min, max}: CounterProps) {
   const [count, setCount] = useState(initialCount);
 
-  function handleIncrement() {
-    setCount((count) => count + 1);
-  }
+  const handleDecrement = useCallback(() => {
+    if (count !== min) {
+      setCount((count) => count - 1);
+    }
+  }, [count, min]);
 
-  function handleDecrement() {
-    setCount((count) => count - 1);
-  }
+  const handleIncrement = useCallback(() => {
+    if (count !== max) {
+      setCount((count) => count + 1);
+    }
+  }, [count, max]);
 
   const decrementClassnames = classNames(styles.Action, {
     [styles.decrement]: true,
@@ -34,17 +40,19 @@ export function Counter({initialCount = 0}: CounterProps) {
         <button
           type="button"
           className={decrementClassnames}
+          disabled={min !== undefined && count <= min}
           onClick={handleDecrement}
         >
-          Decrement
+          <span className={styles.ActionLabel}>Decrement</span>
         </button>
 
         <button
           type="button"
           className={incrementClassnames}
+          disabled={max !== undefined && count >= max}
           onClick={handleIncrement}
         >
-          Increment
+          <span className={styles.ActionLabel}>Increment</span>
         </button>
       </div>
 
