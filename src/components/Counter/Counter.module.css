@@ -20,8 +20,7 @@
 .ActionWrapper {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  justify-content: center;
 }
 
 /* TODO: Make a button mixin */

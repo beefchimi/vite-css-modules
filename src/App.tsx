@@ -1,4 +1,11 @@
-import {Counter, Frame, Header, Main, Footer} from './components';
+import {
+  Counter,
+  LocalVsGlobal,
+  Frame,
+  Header,
+  Main,
+  Footer,
+} from './components';
 import type {HeaderProps} from './components';
 
 export function App() {
@@ -15,6 +22,9 @@ export function App() {
 
       <Main>
         <Counter initialCount={1} min={-10} max={10} />
+        <LocalVsGlobal>
+          <p>Some children that have been passed in.</p>
+        </LocalVsGlobal>
       </Main>
 
       <Footer socialLinks>

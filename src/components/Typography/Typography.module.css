@@ -1,0 +1,31 @@
+.Typography {
+  --typography-spacing: var(--spacing);
+}
+
+.Typography > * + * {
+  margin-top: var(--typography-spacing);
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.spacingBase {
+  /* `.Typography` already defined and uses the "base" spacing */
+}
+
+.spacingTight {
+  --typography-spacing: var(--spacing-tight);
+}
+
+.spacingLoose {
+  --typography-spacing: var(--spacing-loose);
+}

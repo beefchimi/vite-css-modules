@@ -17,12 +17,8 @@
 
 /* Typography */
 
-.Typography * + * {
-  margin-top: 1em;
-  text-align: center;
-}
-
 .Beefchimi {
+  cursor: zoom-in;
   margin-left: auto;
   margin-right: auto;
   width: 100px;

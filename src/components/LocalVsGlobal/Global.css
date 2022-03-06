@@ -1,0 +1,12 @@
+/*
+ * This class name is identical to what is found in `Local.module.css`.
+ * This will not get rendered unless it is passed as a plain string,
+ * and will not be obfuscated by build tools.
+*/
+.GlobalInterior {
+  background-color: var(--color-error);
+}
+
+.Global p {
+  color: var(--color-error);
+}

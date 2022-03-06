@@ -1,0 +1,16 @@
+.LocalVsGlobal {
+  margin-top: var(--spacing-loosest);
+  padding: var(--spacing);
+  border: 1px solid var(--color-surface-bg-invert);
+  border-radius: var(--radius-loose);
+}
+
+/*
+.GlobalInterior {
+  background-color: green;
+}
+*/
+
+.Local p {
+  color: var(--color-success);
+}

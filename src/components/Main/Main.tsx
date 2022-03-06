@@ -1,6 +1,7 @@
 import type {ReactNode} from 'react';
 
 import {beefchimiImgUrl} from '../../assets/media';
+import {Typography, TypographyAlign, TypographySpacing} from '../Typography';
 
 import styles from './Main.module.css';
 
@@ -15,7 +16,10 @@ export function Main({children}: MainProps) {
 
   return (
     <main className={styles.Main}>
-      <div className={styles.Typography}>
+      <Typography
+        align={TypographyAlign.Center}
+        spacing={TypographySpacing.Loose}
+      >
         <div className={styles.Beefchimi}>
           <img
             src={beefchimiImgUrl}
@@ -52,7 +56,7 @@ export function Main({children}: MainProps) {
             Vite Docs
           </a>
         </p>
-      </div>
+      </Typography>
 
       {childrenMarkup}
     </main>
