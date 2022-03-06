@@ -3,8 +3,8 @@
 
 .Action {
   cursor: pointer;
-  padding: 10px;
-  font-size: 28px;
+  padding: var(--spacing-tight);
+  font-size: var(--font-size-h2);
   border-radius: var(--radius);
   background-color: transparent;
   transition: background-color var(--motion-duration) var(--motion-easing);
@@ -23,11 +23,13 @@
 }
 
 .Menu {
+  --nav-menu-width: 160px;
+
   display: none;
   position: absolute;
   top: var(--header-height);
   right: 0;
-  width: 160px;
+  width: var(--nav-menu-width);
   background: var(--color-surface-bg-invert);
 }
 
@@ -36,18 +38,18 @@
 }
 
 .Item:first-child {
-  padding-top: 10px;
+  padding-top: var(--spacing-tight);
 }
 
 .Item:last-child {
-  padding-bottom: 10px;
+  padding-bottom: var(--spacing-tight);
 }
 
 .Link {
   display: block;
-  padding: 10px 20px;
-  font-size: 20px;
-  font-weight: 700;
+  padding: var(--spacing-tight) var(--spacing-loose);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
   color: var(--color-text);
 }
 

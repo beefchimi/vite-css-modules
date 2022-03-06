@@ -12,10 +12,10 @@
   }
 
   25% {
-    transform: translateX(-10px);
+    transform: translateX(calc(var(--spacing-tigher) * -1));
   }
 
   75% {
-    transform: translateX(10px);
+    transform: translateX(var(--spacing-tigher));
   }
 }

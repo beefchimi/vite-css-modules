@@ -1,0 +1,14 @@
+/*
+ * These variables are often better suited for SCSS-like variables,
+ * as border tokens are not really overridden per-theme.
+*/
+:root {
+  --border-width: 1px;
+  --border-width-thick: 2px;
+
+  --border-common: var(--border-width) solid var(--color-surface-bg-invert);
+
+  --radius-tight: 2px;
+  --radius: 4px;
+  --radius-loose: 8px;
+}

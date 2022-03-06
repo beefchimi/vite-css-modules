@@ -2,9 +2,9 @@
   position: relative;
   grid-area: header;
   display: flex;
-  gap: 20px;
+  gap: var(--spacing-loose);
   align-items: center;
-  padding: 10px;
+  padding: var(--spacing-tight);
   height: var(--header-height);
   background-color: var(--color-surface-bg-invert);
 }
@@ -17,9 +17,9 @@
 */
 .Title :global {
   flex: 1 1 auto;
-  font-size: 20px;
-  font-weight: 700;
-  color: white;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
   animation: global-wiggle-animation infinite 2s linear;
 }
 

@@ -21,5 +21,14 @@
     'Courier New',
     monospace;
 
-  --font-size-base: 16px;
+  --font-size-h1: 32px;
+  --font-size-h2: 28px;
+  --font-size-h3: 20px;
+
+  --font-size-subtitle: 18px;
+  --font-size-text: 16px;
+  --font-size-subtext: 14px;
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
 }

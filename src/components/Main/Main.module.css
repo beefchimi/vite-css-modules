@@ -4,32 +4,34 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  font-size: var(--font-size-base);
+  padding: var(--spacing-tight);
+  font-size: var(--font-size-text);
   color: var(--color-text-invert);
 }
 
 .Children {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px dashed var(--color-surface-bg-invert);
+  margin-top: var(--spacing-loose);
+  padding-top: var(--spacing-loose);
+  border-top: var(--border-width) dashed var(--color-surface-bg-invert);
 }
 
 /* Typography */
 
 .Beefchimi {
+  --beefchimi-size: 100px;
+
   cursor: zoom-in;
   margin-left: auto;
   margin-right: auto;
-  width: 100px;
-  height: 100px;
+  max-width: var(--beefchimi-size);
+  height: var(--beefchimi-size);
   border-radius: var(--radius-loose);
   overflow: hidden;
-  transition: width 1s ease-in-out;
+  transition: max-width 1s ease-in-out;
 }
 
 .Beefchimi:hover {
-  width: 400px;
+  max-width: calc(var(--beefchimi-size) * 4);
 }
 
 .Thumbnail {
@@ -41,12 +43,12 @@
 }
 
 .Main h1 {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
 }
 
 .Main p {
-  font-size: 20px;
+  font-size: var(--font-size-h3);
 }
 
 .Hyperlink {

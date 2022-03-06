@@ -3,17 +3,17 @@
   display: grid;
   align-content: center;
   justify-items: center;
-  padding: 10px;
+  padding: var(--spacing-tight);
   min-height: var(--footer-height);
   background-color: var(--color-brand);
 }
 
+/* TODO: We need to use a SCSS-like variable here */
 @media screen and (min-width: 768px) {
-  /* TODO: We need to use a SCSS-like variable here */
   .Footer {
     grid-template-columns: auto auto;
     justify-items: unset;
-    padding: 20px;
+    padding: var(--spacing-loose);
   }
 }
 
@@ -27,23 +27,20 @@
   */
 }
 
-.Children {
-}
-
 .Children p {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: var(--font-size-subtext);
+  font-weight: var(--font-weight-bold);
   color: var(--color-text);
 }
 
 .SocialList {
   display: flex;
-  gap: 10px;
-  margin-top: 20px;
+  gap: var(--spacing-tight);
+  margin-top: var(--spacing-loose);
 }
 
+/* TODO: We need to use a SCSS-like variable here */
 @media screen and (min-width: 768px) {
-  /* TODO: We need to use a SCSS-like variable here */
   .SocialList {
     justify-content: end;
     margin-top: 0;
@@ -54,8 +51,8 @@
 }
 
 .SocialIcon {
-  width: 20px;
-  height: 20px;
+  width: var(--icon-size);
+  height: var(--icon-size);
   color: var(--color-text);
 }
 
