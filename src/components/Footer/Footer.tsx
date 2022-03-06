@@ -18,19 +18,17 @@ export function Footer({children, socialLinks = false}: FooterProps) {
   const socialMarkup = socialLinks ? (
     <ul className={styles.SocialList}>
       <li className={styles.SocialItem}>
-        <div
-          className={classNames(styles.SocialIcon, {[styles.instagram]: true})}
-        >
+        <div className={classNames(styles.SocialIcon, styles.instagram)}>
           <IconInstagram />
         </div>
       </li>
       <li className={styles.SocialItem}>
-        <div className={classNames(styles.SocialIcon, {[styles.tiktok]: true})}>
+        <div className={classNames(styles.SocialIcon, styles.tiktok)}>
           <IconTikTok />
         </div>
       </li>
       <li className={styles.SocialItem}>
-        <div className={classNames(styles.SocialIcon, {[styles.twitch]: true})}>
+        <div className={classNames(styles.SocialIcon, styles.twitch)}>
           <IconTwitch />
         </div>
       </li>

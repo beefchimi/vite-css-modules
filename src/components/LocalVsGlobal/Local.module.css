@@ -1,7 +1,7 @@
 .LocalVsGlobal {
   margin-top: var(--spacing-loosest);
   padding: var(--spacing);
-  border: 1px solid var(--color-surface-bg-invert);
+  border: 1px dashed var(--color-surface-bg-invert);
   border-radius: var(--radius-loose);
 }
 

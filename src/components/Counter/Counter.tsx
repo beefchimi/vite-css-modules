@@ -25,13 +25,8 @@ export function Counter({initialCount = 0, min, max}: CounterProps) {
     }
   }, [count, max]);
 
-  const decrementClassnames = classNames(styles.Action, {
-    [styles.decrement]: true,
-  });
-
-  const incrementClassnames = classNames(styles.Action, {
-    [styles.increment]: true,
-  });
+  const decrementClassnames = classNames(styles.Action, styles.decrement);
+  const incrementClassnames = classNames(styles.Action, styles.increment);
 
   return (
     <div className={styles.Counter}>
