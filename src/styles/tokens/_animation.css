@@ -1,0 +1,8 @@
+/*
+ * These variables are often better suited for SCSS-like variables,
+ * as motion tokens are not really overridden per-theme.
+*/
+:root {
+  --motion-duration: 100ms;
+  --motion-easing: ease-in-out;
+}

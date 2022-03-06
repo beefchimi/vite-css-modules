@@ -19,12 +19,6 @@
   margin: 0;
 }
 
-html,
-body,
-#ReactRoot {
-  height: 100%;
-}
-
 body {
   font-family: sans-serif;
   line-height: 1;

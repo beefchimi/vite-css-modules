@@ -2,3 +2,13 @@
   color: var(--color-text);
   background-color: var(--color-brand);
 }
+
+html {
+  background-color: var(--color-surface-bg);
+}
+
+html,
+body,
+#ReactRoot {
+  height: 100%;
+}

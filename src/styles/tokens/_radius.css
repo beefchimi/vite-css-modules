@@ -1,0 +1,9 @@
+/*
+ * These variables are often better suited for SCSS-like variables,
+ * as radius tokens are not really overridden per-theme.
+*/
+:root {
+  --radius-tight: 2px;
+  --radius: 4px;
+  --radius-loose: 8px;
+}

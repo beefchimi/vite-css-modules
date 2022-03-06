@@ -1,62 +1,9 @@
-:root {
-  /* Colors */
-  --color-surface-bg-up: #ffffff;
-  --color-surface-bg: #efe9f4;
-  --color-surface-bg-down: #d8d4db;
+@import './tokens/_animation.css';
+@import './tokens/_breakpoint.css';
+@import './tokens/_color.css';
+@import './tokens/_radius.css';
+@import './tokens/_spacing.css';
+@import './tokens/_typography.css';
 
-  --color-surface-bg-invert-up: #2d3937;
-  --color-surface-bg-invert: #171d1c;
-  --color-surface-bg-invert-down: #090b0b;
-
-  --color-surface-bg-neutral-up: #776f69;
-  --color-surface-bg-neutral: #615b56;
-  --color-surface-bg-neutral-down: #423e3b;
-
-  --color-text: #ffffff;
-  --color-text-invert: #000000;
-
-  --color-text-interactive-up: #62a1e4;
-  --color-text-interactive: #3083dc;
-  --color-text-interactive-down: #2378d1;
-
-  --color-brand-up: #8991fa;
-  --color-brand: #5863f8;
-  --color-brand-down: #3b48f7;
-
-  --color-brand-react: #61dafb;
-
-  /* Breakpoints */
-  /*
-   * Unforuntately, CSS does not allow the use of `var(--some-prop)`
-   * within @media queries... rendering these essentially useless.
-  */
-  --breakpoint-phablet: 480px;
-  --breakpoint-tablet: 768px;
-
-  /* Animation */
-  --motion-duration: 100ms;
-  --motion-duration-slow: 200ms;
-  --motion-easing: ease-in-out;
-
-  /* Borders */
-  --radius: 4px;
-  --radius-tight: 2px;
-  --radius-loose: 8px;
-
-  /* Typography */
-  --font-family-common: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  --font-family-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-  --font-size-base: 16px;
-
-  /* Header */
-  --header-height: 64px;
-
-  /* Footer */
-  --footer-height: 64px;
-
-  /* Actions */
-  --hyperlink-color: var(--color-text-interactive);
-}
+@import './tokens/_interaction.css';
+@import './tokens/_components.css';
