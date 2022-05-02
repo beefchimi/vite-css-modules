@@ -1,0 +1,24 @@
+@use '../utilities' as *;
+@use '../tokens/breakpoint' as *;
+
+@function get-breakpoint($target) {
+  $value: map-get($breakpoint-data, $target);
+
+  @if type-of($value) == number {
+    @return $value;
+  } @else {
+    @error available-map-properties('Breakpoint', $breakpoint-data, $target);
+  }
+}
+
+@mixin breakpoint-before($target) {
+  @media screen and (max-width: #{get-breakpoint($target) - 1px}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-after($target) {
+  @media screen and (min-width: #{get-breakpoint($target)}) {
+    @content;
+  }
+}

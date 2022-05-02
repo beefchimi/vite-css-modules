@@ -1,4 +1,4 @@
-@use '../tokens/breakpoint' as *;
+@use '../shared/breakpoint' as *;
 
 // Unforuntately, CSS does not allow the use of `var(--some-prop)` within
 // @media queries... rendering these unusable for their primary purpose.
@@ -8,7 +8,7 @@
 // as breakpoint tokens are not really overridden per-theme.
 
 :root {
-  --breakpoint-phablet: #{$breakpoint-phablet};
-  --breakpoint-tablet: #{$breakpoint-tablet};
-  --breakpoint-desktop: #{$breakpoint-desktop};
+  --breakpoint-phablet: #{get-breakpoint(phablet)};
+  --breakpoint-tablet: #{get-breakpoint(tablet)};
+  --breakpoint-desktop: #{get-breakpoint(desktop)};
 }
