@@ -1,0 +1,34 @@
+@use '../tokens/color' as *;
+
+:root {
+  --color-text: #{$color-text};
+  --color-text-invert: #{$color-text-invert};
+
+  --color-brand-up: #{$color-brand-up};
+  --color-brand: #{$color-brand};
+  --color-brand-down: #{$color-brand-down};
+
+  --color-surface-bg-up: #{$color-surface-bg-up};
+  --color-surface-bg: #{$color-surface-bg};
+  --color-surface-bg-down: #{$color-surface-bg-down};
+
+  --color-surface-bg-invert-up: #{$color-surface-bg-invert-up};
+  --color-surface-bg-invert: #{$color-surface-bg-invert};
+  --color-surface-bg-invert-down: #{$color-surface-bg-invert-down};
+
+  --color-surface-bg-neutral-up: #{$color-surface-bg-neutral-up};
+  --color-surface-bg-neutral: #{$color-surface-bg-neutral};
+  --color-surface-bg-neutral-down: #{$color-surface-bg-neutral-down};
+
+  --color-text-interactive-up: #{$color-text-interactive-up};
+  --color-text-interactive: #{$color-text-interactive};
+  --color-text-interactive-down: #{$color-text-interactive-down};
+
+  --color-success-up: #{$color-success-up};
+  --color-success: #{$color-success};
+  --color-success-down: #{$color-success-down};
+
+  --color-error-up: #{$color-error-up};
+  --color-error: #{$color-error};
+  --color-error-down: #{$color-error-down};
+}

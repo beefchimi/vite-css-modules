@@ -1,0 +1,24 @@
+// This is the main entry point for all of our App's global styles.
+// Since this project uses React + CSS Modules, most of the styling
+// we author will be co-located alongside our UI components and
+// imported directly into that component's `.tsx` file.
+// The build tooling then collects all of those "non-global" files,
+// transforms them, bundles them, and automatically injects the
+// generated files into our HTML page. In other words, we do not need to
+// explicitly `@use` any co-located styles into this "entry manifest".
+
+// NOTE: These imports are order dependent.
+@use 'global/reset';
+@use 'global/keyframes';
+@use 'global/app';
+
+@use 'design-system/animation';
+@use 'design-system/border';
+@use 'design-system/breakpoint';
+@use 'design-system/color';
+@use 'design-system/media';
+@use 'design-system/spacing';
+@use 'design-system/typography';
+
+@use 'design-system/interaction';
+@use 'design-system/components';
