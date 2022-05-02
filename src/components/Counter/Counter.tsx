@@ -2,7 +2,7 @@ import {useCallback, useState} from 'react';
 
 import {classNames} from '../../utilities';
 import {Typography, TypographyAlign} from '../Typography';
-import styles from './Counter.module.css';
+import styles from './Counter.module.scss';
 
 export interface CounterProps {
   initialCount?: number;
