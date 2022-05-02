@@ -1,0 +1,53 @@
+@use '../../styles/shared' as *;
+
+.Footer {
+  grid-area: footer;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  padding: var(--spacing-tight);
+  min-height: var(--footer-height);
+  background-color: var(--color-brand);
+
+  @include breakpoint-after(tablet) {
+    grid-template-columns: auto auto;
+    justify-items: unset;
+    padding: var(--spacing-loose);
+  }
+}
+
+.socialLinks {
+  // Even though this declaration doesn't actually contain any styles,
+  // the variant className will still get added to the markup.
+  // If we care about this, we could write some build tooling to parse
+  // each declaration for contents and assign `undefined` if empty.
+  // Alternatively, there might be a PostCSS plugin for this.
+}
+
+.Children {
+  p {
+    font-size: var(--font-size-subtext);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+  }
+}
+
+.SocialList {
+  display: flex;
+  gap: var(--spacing-tight);
+  margin-top: var(--spacing-loose);
+
+  @include breakpoint-after(tablet) {
+    justify-content: end;
+    margin-top: 0;
+  }
+}
+
+.SocialItem {
+  flex: 0 0 auto;
+}
+
+.SocialIcon {
+  @include icon-wrapper-base;
+  color: var(--color-text);
+}
