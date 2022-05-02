@@ -13,4 +13,17 @@ export default defineConfig({
       // svgrOptions: {},
     }),
   ],
+  resolve: {
+    alias: {
+      // NOTE: This might require ignoring `@typescript-eslint/naming-convention`.
+      // '@/': path.resolve(__dirname, 'src'),
+    },
+  },
+  css: {
+    modules: {
+      // If we want to remove the redundancy of the `folder` + base class name,
+      // we could write a function `generateScopedName()` function.
+      generateScopedName: '[folder]_[local]_[hash:base64:6]',
+    },
+  },
 });
