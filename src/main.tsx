@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // NOTE: These imports are order dependent!
-import './styles/reset.css';
+import './styles/reset.scss';
 import './styles/design-system.css';
 import './styles/keyframes.css';
 import './styles/global.css';
