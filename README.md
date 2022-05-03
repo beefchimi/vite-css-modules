@@ -136,4 +136,4 @@ We would need to make sure our `browserlist` is configured correctly, as some of
 #### Missing PostCSS features
 
 - If we do not use `postcss-advanced-variables`, then there are several features we may find ourselves missing.
-  -If `postcss-import` does not provide a module system, then we won't be able to have explicit dependency imports.
+- If `postcss-import` does not provide a module system, then we won't be able to have explicit dependency imports.
