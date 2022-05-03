@@ -1,0 +1,73 @@
+@use '../../styles/tokens' as *;
+
+.Counter {
+  padding: var(--spacing-tight);
+  text-align: center;
+  border: var(--border-common);
+  border-radius: var(--radius-loose);
+
+  code {
+    padding: 2px 4px;
+    color: var(--color-brand-down);
+    background-color: var(--color-surface-bg-down);
+    border-radius: var(--radius-tight);
+  }
+}
+
+.Title {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+}
+
+.ActionWrapper {
+  display: flex;
+  gap: var(--spacing-tight);
+  justify-content: center;
+}
+
+// TODO: Make a button mixin
+.Action {
+  cursor: pointer;
+  padding: var(--spacing-tight);
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  color: var(--color-text);
+  background-color: var(--color-brand);
+  border-radius: var(--radius);
+  transition: background-color $motion-duration $motion-easing;
+
+  &:focus,
+  &:hover {
+    background-color: var(--color-brand-down);
+  }
+
+  &:active {
+    background-color: var(--color-brand);
+  }
+
+  &[disabled] {
+    &,
+    &:focus,
+    &:hover,
+    &:active {
+      pointer-events: none;
+      background-color: var(--color-surface-bg-neutral);
+      opacity: 0.8;
+    }
+  }
+}
+
+.ActionLabel {
+  display: block;
+
+  .decrement &::before {
+    content: '🔥';
+    margin-right: var(--spacing-tigher);
+  }
+
+  .increment &::after {
+    content: '✨';
+    margin-left: var(--spacing-tigher);
+  }
+}

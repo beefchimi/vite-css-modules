@@ -7,7 +7,8 @@
   display: none;
 }
 
-/* Foundation */
+///
+/// Foundation
 
 *,
 *::before,
@@ -26,7 +27,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Media Elements */
+///
+/// Media Elements
 
 img,
 svg,
@@ -37,7 +39,8 @@ video {
   max-width: 100%;
 }
 
-/* Form Elements */
+///
+/// Form Elements
 
 :where([contenteditable]) {
   -moz-user-modify: read-write;
@@ -70,14 +73,16 @@ meter {
   appearance: revert;
 }
 
-/* Interactive Elements */
+///
+/// Interactive Elements
 
 a,
 button {
   cursor: revert;
 }
 
-/* Typographic Elements */
+///
+/// Typographic Elements
 
 code {
   font-family: monospace;

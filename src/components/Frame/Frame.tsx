@@ -1,6 +1,6 @@
 import type {ReactNode} from 'react';
 
-import styles from './Frame.module.css';
+import styles from './Frame.module.scss';
 
 export interface FrameProps {
   children: ReactNode;

@@ -13,7 +13,7 @@
  * By using `:global` AFTER `.Title`, we allow the classname
  * to be transformed, but preserve the declaration contents.
  * Technically, all we care about preserving is the `animation-name`,
- * so that might be better separated to its own declaration.
+ * so that would actually be better separated to its own declaration.
 */
 .Title :global {
   flex: 1 1 auto;

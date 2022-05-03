@@ -13,37 +13,57 @@ npm run start
 
 You may also need to configure your IDE to recognize `.module.css` with a specific language mode. For example, if our configuration uses a `SCSS`-like feature-set, it might make sense to always have `.css` files recognized as `.scss`. Otherwise, you may find features like auto-complete and syntax highlighting not quite working as expected.
 
+## Remaining work
+
+- [ ] Convert remaining `.css` files to `.scss`.
+- [ ] Demonstrate the difference between `*.module.(s)css` and `*.(s)css` _(without `module` extension)_.
+  - What effect does this have on `global` vs `local`?
+- [ ] Configure `postcss` for `Vite` and enable `autoprefixer`.
+  - Would be ideal if it could consume `@beefchimi/postcss-plugin`. However, that plugin should really be simplified to only include `autoprefixer`, since the other concerns are not as relevant these days.
+- [ ] Implement `Vite > resolve.alias` to allow `@/` alias to `src` folder.
+  - This should work for both `.(s)css` and `.ts(x)` files.
+- [ ] Consider utilizing `additionalData` to auto import some foundational `.scss` utilities.
+- [ ] Implement a `<ThemeProvider />` and demonstrate how easy/difficult it is to maintain different theme styles using `CSS Modules + React`.
+- [ ] Implement some tooling that allows defining "design system tokens" in a _shareable source of truth_.
+  - Would allow us to author a `.json` or `.ts` file that maps "variables to values".
+  - This file would then be importable / parseable by both `.(s)css` and `.ts(x)` files.
+- [ ] Implement some tooling that can parse both `.(s)css` and `.ts(x)` files to allow CSS Custom Properties linting.
+  - This would be necessary in order to "type check" our use of CSS Custom Properties, allowing us to avoid typos.
+
 ## Exploration
 
 Here are some quick thoughts on this technology choice:
 
 ### Pros
 
-- Is just `CSS`, so all of the editor integration you would expect to have comes _(mostly)_ for free.
+- Its just `CSS`, so all of the editor integration you would expect to have comes _(mostly)_ for free.
   - Autocompletion, syntax highlighting, etc.
-- Extremely shallow learning curve.
-  - Not much to know beyond understanding CSS.
+- Shallow learning curve.
+  - While there are some quirks of CSS Modules, there isn't much to know beyond familiarity with CSS.
 - Control over bundle generation.
   - Can have finer control over bundle splitting and asset caching.
 - Zero runtime cost _(cost is at build time)_.
 - Classname obfuscation _(hashed classnames)_.
   - Development will produce “debug-friendly” class names (`.Header_x37`).
   - Production _can_ produce fully obfuscated class names (`H4a_x37`).
-- Used in combination with `postcss`, which has a healthy ecosystem of plugins.
+- Used in combination with `postcss`, which offers other plugins we require for our production builds.
 
 ### Cons
 
-- Given the nature of our app and iteration cycles, caching `css` may not be all that relevant at the moment.
+- Given the nature of our app and iteration cycles, caching `css` may not be _all that relevant_ at the moment.
+  - This is highly debatable however, especially considering we don't even have continuous deployment.
 - With a richly interactive app like ours, runtime CSS might actually offer some benefits.
+  - Would require more investigation before detailing any of those benefits.
 - No type safety.
   - There is nothing to ensure `CSS custom properties` are named/used correctly.
   - Example: A typo in a `CSS custom property` will not throw any errors and can be shipped to production without warning.
   - As a result, it is harder to debug visual issues.
-  - This becomes a real issue when we think about extracting a design system into a separate dependency. Imagine bumping the dependency and not following the “breaking changes”, which could contain variable renaming... you will be using undefined variables without breaking the build.
+  - This becomes a real issue when we think about extracting a design system into a separate dependency. Imagine bumping the dependency and not following the “breaking changes”, which could contain variable renaming... you will be using `undefined` variables without breaking the build.
 - No protection from `custom property` collisions.
   - Can easily write a `CSS custom property` with an identical name.
   - However, there might be some `postcss` tooling to add this feature.
 - Need to manually configure many `postcss` plugins to obtain the feature-set developers want.
+  - Alternatively, use `dart-sass` with only a handful of `postcss` plugins.
 - Cannot share cross-language tokens.
   - Example: Cannot write a selector loop informed by a `array.length` that is defined in your JS code.
   - Would need to either introduce some tooling to enable importing/exporting across languages, or split your source of truth by duplicating the variable in SCSS (degrades confidence).
@@ -65,7 +85,20 @@ In order to provide a comfortable developer experience, we need to couple CSS mo
 - Conditional operators such as `or` and `and`.
 - Single-line comments.
 
-If we decide to move forward with CSS Modules, we will need to configure the following PostCSS plugins:
+If we decide to move forward with CSS Modules, we have the choice of either:
+
+- `dart-sass` with only the `postcss` plugins necessary to complete the feature set.
+- Curating a robust collection of `postcss` plugins to complete the feature set.
+
+### Dart SASS + PostCSS
+
+`dart-sass` should provide all of the features we want without the need to configure various other plugins. The only `postcss` plugin we would still require is [autoprefixer](https://github.com/postcss/autoprefixer).
+
+One feature of `dart-sass` that stands out against anything provided by `postcss` is a "module system", allowing for more explicit imports between `.scss` files.
+
+### PostCSS only
+
+We will need to configure the following PostCSS plugins:
 
 - [autoprefixer](https://github.com/postcss/autoprefixer)
   - Alternatively, [postcss-preset-env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env) is an interesting option.
@@ -86,6 +119,7 @@ The following are configured automatically by `vite`, but will likely need to al
 
 - [postcss-import](https://github.com/postcss/postcss-import)
   - We may want to specify some rules around this, as it should generally only be used for importing “non-static-code” _(mixins, variables, etc)_.
+  - I do not believe this plugin implements "importing as a module system", and therefor would not solve all the requirements for "import behaviour".
 - [postcss-load-config](https://github.com/postcss/postcss-load-config)
   - I need to consult my `dev-configs` package and see if it will work in our required environments.
 - [postcss-modules](https://github.com/madyankin/postcss-modules)
@@ -95,10 +129,11 @@ Vite also uses `css-clean` to handle optimization + minification. I might need t
 
 We would need to make sure our `browserlist` is configured correctly, as some of these tools rely on that.
 
-### Consider
+#### Additional PostCSS considerations
 
 - [postcss-functions](https://github.com/andyjansson/postcss-functions)
 
-### Missing
+#### Missing PostCSS features
 
 - If we do not use `postcss-advanced-variables`, then there are several features we may find ourselves missing.
+  -If `postcss-import` does not provide a module system, then we won't be able to have explicit dependency imports.
