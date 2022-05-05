@@ -1,5 +1,6 @@
-import { style } from "@vanilla-extract/css";
+import { globalStyle, style } from "@vanilla-extract/css";
 import { vars } from "../../styles/theme.css";
+import { Counter } from "../Counter/Counter.css";
 
 export const Frame = style({
   display: "grid",
@@ -10,10 +11,6 @@ export const Frame = style({
   fontFamily: vars.typography.fontFamily.common,
 });
 
-export const code = style({
-  selectors: {
-    [`${Frame} &`]: {
-      fontFamily: vars.typography.fontFamily.code,
-    },
-  },
+globalStyle(`${Frame}  code`, {
+  fontFamily: vars.typography.fontFamily.code,
 });

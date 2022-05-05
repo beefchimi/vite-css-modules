@@ -1,22 +1,18 @@
-import { style } from "@vanilla-extract/css";
+import { globalStyle, style } from "@vanilla-extract/css";
 import { vars } from "../../styles/theme.css";
 
 export const Counter = style({
   padding: vars.spacing.tight,
   textAlign: "center",
-  border: vars.border.width,
+  border: `${vars.border.width} solid ${vars.color.surface.invertDown}`,
   borderRadius: vars.radius.loose,
 });
 
-export const code = style({
-  selectors: {
-    [`${Counter} &`]: {
-      padding: " 2px 4px",
-      color: vars.color.brand.down,
-      backgroundColor: vars.color.surface.down,
-      borderRadius: vars.radius.tight,
-    },
-  },
+globalStyle(`${Counter}  code`, {
+  padding: "2px 4px",
+  color: vars.color.brand.down,
+  backgroundColor: vars.color.surface.down,
+  borderRadius: vars.radius.tight,
 });
 
 export const Title = style({
@@ -44,14 +40,13 @@ export const Action = style({
   transition: "backgroundColor $motionDuration $motionEasing",
 
   selectors: {
-    ":hover &": {
+    [`span:hover &`]: {
       backgroundColor: vars.color.brand.down,
     },
-    ":active &": {
+    [`span:active &`]: {
       backgroundColor: vars.color.brand.base,
     },
-
-    "[disabled] &": {
+    [`span[disabled] &`]: {
       pointerEvents: "none",
       backgroundColor: vars.color.surface.neutral,
       opacity: 0.8,
@@ -59,22 +54,18 @@ export const Action = style({
   },
 });
 
+export const Decrement = style([Action]);
+
+export const Increment = style([Action]);
+
 export const ActionLabel = style({
   display: "block",
-});
-
-export const decrement = style({
   selectors: {
-    [`&::before &`]: {
+    [`${Decrement} &::before`]: {
       content: "🔥",
       marginRight: vars.spacing.tighter,
     },
-  },
-});
-
-export const increment = style({
-  selectors: {
-    ["&::after &"]: {
+    [`${Increment} &::after`]: {
       content: "✨",
       marginLeft: vars.spacing.tighter,
     },

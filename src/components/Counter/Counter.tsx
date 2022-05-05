@@ -25,9 +25,6 @@ export function Counter({ initialCount = 0, min, max }: CounterProps) {
     }
   }, [count, max]);
 
-  const decrementClassnames = classNames(styles.Action, styles.decrement);
-  const incrementClassnames = classNames(styles.Action, styles.increment);
-
   return (
     <div className={styles.Counter}>
       <Typography align={TypographyAlign.Center}>
@@ -36,7 +33,7 @@ export function Counter({ initialCount = 0, min, max }: CounterProps) {
         <div className={styles.ActionWrapper}>
           <button
             type="button"
-            className={decrementClassnames}
+            className={styles.Decrement}
             disabled={min !== undefined && count <= min}
             onClick={handleDecrement}
           >
@@ -45,7 +42,7 @@ export function Counter({ initialCount = 0, min, max }: CounterProps) {
 
           <button
             type="button"
-            className={incrementClassnames}
+            className={styles.Increment}
             disabled={max !== undefined && count >= max}
             onClick={handleIncrement}
           >

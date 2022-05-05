@@ -12,15 +12,15 @@ export const Main = style({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  padding: "var(--spacing-tight)",
-  fontSize: "var(--font-size-text)",
-  color: "var(--color-text-invert)",
+  padding: vars.spacing.tight,
+  fontSize: vars.typography.fontSize.text,
+  color: vars.color.text.invert,
 });
 
 export const Children = style({
-  marginTop: "var(--spacing-loose)",
-  paddingTop: "var(--spacing-loose)",
-  borderTop: "var(--border-width) dashed var(--color-surface-bg-invert)",
+  marginTop: vars.spacing.loose,
+  paddingTop: vars.spacing.loose,
+  borderTop: `${vars.border.width} dashed ${vars.color.surface.invert}`,
 });
 
 /* Typography */
