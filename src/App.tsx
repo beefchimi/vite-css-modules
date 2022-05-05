@@ -5,15 +5,17 @@ import {
   Header,
   Main,
   Footer,
-} from './components';
-import type {HeaderProps} from './components';
+} from "./components";
+import type { HeaderProps } from "./components";
+import "./styles/global/app.css";
+import "./styles/global/keyframes.css";
 
 export function App() {
-  const navigation: NonNullable<HeaderProps['navItems']> = [
-    'Home',
-    'About us',
-    'Contact',
-    'Goodbye',
+  const navigation: NonNullable<HeaderProps["navItems"]> = [
+    "Home",
+    "About us",
+    "Contact",
+    "Goodbye",
   ];
 
   return (

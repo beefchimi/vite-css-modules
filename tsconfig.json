@@ -1,5 +1,4 @@
 {
-  "extends": "@beefchimi/typescript-config/application.json",
   // TODO: Consider moving all of this into a `react-modern.json` config.
   "compilerOptions": {
     "target": "esnext",
@@ -11,7 +10,9 @@
     "skipLibCheck": false,
     "useDefineForClassFields": true,
     "jsx": "react-jsx",
-    "types": ["vite/client", "vite-plugin-svgr/client"]
+    "types": ["vite/client", "vite-plugin-svgr/client"],
+    "moduleResolution": "node",            /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
+    "baseUrl": "./src",                       /* Base directory to resolve non-absolute module names. */
   },
   "include": ["src"],
   // Remove custom definitions from `typescript-configs`

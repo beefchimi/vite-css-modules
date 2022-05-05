@@ -1,8 +1,8 @@
-import {useState} from 'react';
+import { useState } from "react";
 
-import {classNames} from '../../../../utilities';
+import { classNames } from "../../../../utilities";
 
-import styles from './Nav.module.css';
+import * as styles from "./Nav.css";
 
 export interface NavProps {
   items: string[];
@@ -18,7 +18,7 @@ function EmptyState() {
   );
 }
 
-export function Nav({items = []}: NavProps) {
+export function Nav({ items = [] }: NavProps) {
   const [menuActive, setMenuActive] = useState(false);
 
   const handleToggleMenu = () => setMenuActive(!menuActive);
@@ -35,14 +35,14 @@ export function Nav({items = []}: NavProps) {
   ));
 
   return (
-    <nav className={styles.Nav}>
+    <nav>
       <button
         type="button"
         className={styles.Action}
         onClick={handleToggleMenu}
       >
         <span role="img" aria-label="Navigation unavailable">
-          {menuActive ? '📖' : '📘'}
+          {menuActive ? "📖" : "📘"}
         </span>
       </button>
 

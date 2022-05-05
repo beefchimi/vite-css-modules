@@ -2,7 +2,7 @@ import type {ReactNode} from 'react';
 import {classNames, variationName} from '../../utilities';
 
 import {TypographyAlign, TypographySpacing} from './types';
-import styles from './Typography.module.css';
+import * as styles from './Typography.css';
 
 export interface TypographyProps {
   children: ReactNode;

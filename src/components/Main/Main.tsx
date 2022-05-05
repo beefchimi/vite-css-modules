@@ -3,7 +3,7 @@ import type {ReactNode} from 'react';
 import {beefchimiImgUrl} from '../../assets/media';
 import {Typography, TypographyAlign, TypographySpacing} from '../Typography';
 
-import styles from './Main.module.css';
+import * as styles from './Main.css';
 
 export interface MainProps {
   children?: ReactNode;

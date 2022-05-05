@@ -1,13 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import './styles/entry.scss';
-
-import {App} from './App';
+import { App } from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('ReactRoot'),
+  document.getElementById("ReactRoot")
 );

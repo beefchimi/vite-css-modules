@@ -1,8 +1,8 @@
-import {useCallback, useState} from 'react';
+import { useCallback, useState } from "react";
 
-import {classNames} from '../../utilities';
-import {Typography, TypographyAlign} from '../Typography';
-import styles from './Counter.module.scss';
+import { classNames } from "../../utilities";
+import { Typography, TypographyAlign } from "../Typography";
+import * as styles from "./Counter.css";
 
 export interface CounterProps {
   initialCount?: number;
@@ -10,7 +10,7 @@ export interface CounterProps {
   max?: number;
 }
 
-export function Counter({initialCount = 0, min, max}: CounterProps) {
+export function Counter({ initialCount = 0, min, max }: CounterProps) {
   const [count, setCount] = useState(initialCount);
 
   const handleDecrement = useCallback(() => {

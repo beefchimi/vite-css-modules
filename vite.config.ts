@@ -1,6 +1,8 @@
 import {defineConfig} from 'vite';
 import pluginReact from '@vitejs/plugin-react';
 import pluginSvgr from 'vite-plugin-svgr';
+import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
+
 
 export default defineConfig({
   plugins: [
@@ -12,6 +14,7 @@ export default defineConfig({
       // https://github.com/svg/svgo#configuration
       // svgrOptions: {},
     }),
+    vanillaExtractPlugin()
   ],
   resolve: {
     alias: {

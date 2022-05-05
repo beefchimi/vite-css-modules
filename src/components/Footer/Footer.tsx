@@ -3,7 +3,7 @@ import type {ReactNode} from 'react';
 import {classNames} from '../../utilities';
 import {IconInstagram, IconTikTok, IconTwitch} from '../../assets/icons';
 
-import styles from './Footer.module.scss';
+import * as styles from './Footer.css';
 
 export interface FooterProps {
   children: ReactNode;
